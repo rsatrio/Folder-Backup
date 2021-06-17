@@ -147,7 +147,10 @@ public class FileBackup implements Callable<Integer> {
                     StandardCopyOption.REPLACE_EXISTING,
                     StandardCopyOption.COPY_ATTRIBUTES);
             log1.info("Create backup for file {}",pathAsal.toFile().toString());
-            listFiles.add(pathAsal.toString());
+            
+            if(!listFiles.contains(pathAsal))   {
+                listFiles.add(pathAsal.toString());
+            }
             copyCount++;
         }
 

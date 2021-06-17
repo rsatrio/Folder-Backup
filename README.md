@@ -5,7 +5,8 @@ A simple CLI software for backup a folder. Build with Java 8.
 
 ## Features
 - Can be used for folder to folder backup (user that run the program should have read & write privileges to the folder)
-- Will not delete any file. Overwritten file in destination folder backup will be moved to trash
+- After the initial backup (first backup), subsequent backup will be incremental (only file added to the source folder or file modified after the last backup)
+- Will not delete any file in destination path. Overwritten file in destination folder backup will be moved to trash
 
 ## Build
 Use mvn package to build the module into jar file
