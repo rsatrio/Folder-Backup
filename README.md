@@ -1,4 +1,4 @@
-```
+
 # Simple Folder-To-Folder File Backup
 
 A simple CLI software for backup a folder. Build with Java 8.
@@ -9,17 +9,18 @@ A simple CLI software for backup a folder. Build with Java 8.
 
 ## Build
 Use mvn package to build the module into jar file
-​```console
-> mvn clean package
-​```
+```shell
+mvn clean package
+```
+
 
 ## Usage
 - Create configuration file of things to backup. This example below will create configration to backup file from folder d:\source to d:\destination. The config filename is d:\backup.cfg and trash folder is in d:\trash:
-```console
+```shell
 java -jar file-backup.jar createConfig -s d:\source -d d:\destination -t d:\trash -f d:\backup.cfg
 ```
-- Run the backup using config file created above:
-```console
+- Run the backup using config file created above: 
+```shell
 java -jar file-backup.jar runBackup -c d:\backup.cfg
 ```
 - Voila, all the file and folder under d:\source is now backup to d:\destination
